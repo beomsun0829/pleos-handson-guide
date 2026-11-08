@@ -1,0 +1,315 @@
+{
+ "_about": "Home and playlists (docs/design/home-redesign.md). Topic cards are the only cards shown; notes are headlines of absorbed cards; absorbed and note ids open their topic card.",
+ "essentials": {
+  "title": "이 차 기능",
+  "cards": [
+   "c0-start",
+   "c4-gear",
+   "c4-epb",
+   "c4-autohold",
+   "c0-door",
+   "c0-trunk",
+   "c1-seat",
+   "c3-wheelpos",
+   "c2-mirror",
+   "c5-auto",
+   "c5-hazard",
+   "c5-wiper",
+   "c6-vent",
+   "c6-front",
+   "c9-cruise",
+   "c9-lane",
+   "c8-colors"
+  ]
+ },
+ "road": [
+  {
+   "label": "차선 바꾸기",
+   "cards": [
+    "c11-order",
+    "c11-gap",
+    "c11-buslane"
+   ],
+   "icon": "lane"
+  },
+  {
+   "label": "교차로",
+   "cards": [
+    "c12-right",
+    "c12-unprotected",
+    "c12-roundabout",
+    "c12-emergency"
+   ],
+   "icon": "intersection"
+  },
+  {
+   "label": "고속도로",
+   "cards": [
+    "c13-merge",
+    "c13-distance",
+    "c13-exit",
+    "c13-toll"
+   ],
+   "icon": "highway"
+  },
+  {
+   "label": "세우기 · 주차",
+   "cards": [
+    "c4-park",
+    "c10-reverse",
+    "c10-exit",
+    "c10-parallel"
+   ],
+   "icon": "park"
+  },
+  {
+   "label": "보호구역",
+   "cards": [
+    "c14-school"
+   ],
+   "icon": "school"
+  }
+ ],
+ "topics": {
+  "c4-gear": {
+   "notes": [
+    "c4-creep"
+   ],
+   "absorbs": [
+    "c4-regen"
+   ]
+  },
+  "c4-park": {
+   "notes": [],
+   "absorbs": [
+    "c4-smooth"
+   ]
+  },
+  "c4-autohold": {
+   "notes": [],
+   "absorbs": []
+  },
+  "c5-wiper": {
+   "notes": [],
+   "absorbs": [
+    "c6-inout"
+   ]
+  },
+  "c5-auto": {
+   "notes": [
+    "c5-high",
+    "c5-rain"
+   ],
+   "absorbs": [
+    "c5-fog",
+    "c5-drl"
+   ]
+  },
+  "c6-front": {
+   "notes": [
+    "c6-rear",
+    "c7-modes",
+    "c6-ac"
+   ],
+   "absorbs": [
+    "c6-outside",
+    "c6-autodefog",
+    "c6-prevent",
+    "c6-summer",
+    "c6-frost",
+    "c7-when",
+    "c7-co2",
+    "c7-auto",
+    "c7-cleaner",
+    "c6-ac",
+    "c7-heat",
+    "c6-why"
+   ]
+  },
+  "c8-colors": {
+   "notes": [
+    "c8-tpms",
+    "c8-fuel"
+   ],
+   "absorbs": [
+    "c8-common"
+   ]
+  },
+  "c9-cruise": {
+   "notes": [
+    "c9-release",
+    "c9-fca"
+   ],
+   "absorbs": [
+    "c9-fca",
+    "c9-bsd",
+    "c9-rule"
+   ]
+  },
+  "c9-lane": {
+   "notes": [],
+   "absorbs": []
+  },
+  "c11-order": {
+   "notes": [
+    "c11-one",
+    "c11-solid"
+   ],
+   "absorbs": [
+    "c5-turn",
+    "c11-wait",
+    "c11-shoulder"
+   ]
+  },
+  "c11-gap": {
+   "notes": [
+    "c11-speed",
+    "c11-letin"
+   ],
+   "absorbs": []
+  },
+  "c12-right": {
+   "notes": [
+    "c12-stopline",
+    "c12-yellow"
+   ],
+   "absorbs": []
+  },
+  "c12-unprotected": {
+   "notes": [
+    "c12-block"
+   ],
+   "absorbs": []
+  },
+  "c12-roundabout": {
+   "notes": [
+    "c12-uturn"
+   ],
+   "absorbs": []
+  },
+  "c13-merge": {
+   "notes": [
+    "c13-passing"
+   ],
+   "absorbs": []
+  },
+  "c13-distance": {
+   "notes": [
+    "c13-drowsy"
+   ],
+   "absorbs": []
+  },
+  "c13-exit": {
+   "notes": [
+    "c13-missed",
+    "c13-accident"
+   ],
+   "absorbs": []
+  },
+  "c14-school": {
+   "notes": [
+    "c14-bus",
+    "c14-alley"
+   ],
+   "absorbs": [
+    "c14-buslane",
+    "c14-senior"
+   ]
+  },
+  "c10-reverse": {
+   "notes": [
+    "c10-tpark",
+    "c9-sensor"
+   ],
+   "absorbs": [
+    "c10-rule"
+   ]
+  },
+  "c10-exit": {
+   "notes": [],
+   "absorbs": []
+  },
+  "c0-door": {
+   "notes": [],
+   "absorbs": []
+  },
+  "c1-seat": {
+   "notes": [
+    "c1-sit",
+    "c1-distance",
+    "c1-backrest"
+   ],
+   "absorbs": [
+    "c1-belt",
+    "c1-height",
+    "c1-headrest",
+    "c1-recline",
+    "c1-order",
+    "c1-save",
+    "c8-belt",
+    "c4-onefoot",
+    "c3-grip",
+    "c3-pushpull",
+    "c3-noCross",
+    "c3-return",
+    "c3-feel"
+   ]
+  },
+  "c3-wheelpos": {
+   "notes": [
+    "c1-wheel"
+   ],
+   "absorbs": []
+  },
+  "c2-mirror": {
+   "notes": [
+    "c2-side",
+    "c2-blind"
+   ],
+   "absorbs": [
+    "c2-fold",
+    "c2-convex",
+    "c2-room"
+   ]
+  },
+  "c4-epb": {
+   "notes": [],
+   "absorbs": []
+  },
+  "c6-vent": {
+   "notes": [],
+   "absorbs": []
+  },
+  "c5-hazard": {
+   "notes": [
+    "c13-jam"
+   ],
+   "absorbs": []
+  },
+  "c0-trunk": {
+   "notes": [],
+   "absorbs": []
+  },
+  "c12-emergency": {
+   "notes": [],
+   "absorbs": []
+  },
+  "c13-toll": {
+   "notes": [],
+   "absorbs": []
+  },
+  "c10-parallel": {
+   "notes": [],
+   "absorbs": []
+  },
+  "c11-buslane": {
+   "notes": [],
+   "absorbs": []
+  },
+  "c0-start": {
+   "notes": [],
+   "absorbs": []
+  }
+ },
+ "_detail": "road groups are the driving guide: shown in full detail (notes expanded with their explanations)."
+}

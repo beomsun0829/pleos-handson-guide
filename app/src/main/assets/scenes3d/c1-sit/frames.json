@@ -1,0 +1,29 @@
+{
+  "card": "c1-sit",
+  "source": [
+    "grandeur_convenience_ergo_motion_seat_stretching_mode_off.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "운전석",
+      "ms": 2000,
+      "arrows": [
+        {
+          "pts": [
+            [
+              0.6989,
+              0.8889
+            ],
+            [
+              0.4701,
+              0.8016
+            ]
+          ],
+          "label": "엉덩이를 뒤로"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

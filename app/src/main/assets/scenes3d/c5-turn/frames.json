@@ -1,0 +1,42 @@
+{
+  "card": "c5-turn",
+  "source": [
+    "grandeur_function_multi_function_switch.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "핸들 왼쪽 레버",
+      "ms": 2000,
+      "arrows": [
+        {
+          "pts": [
+            [
+              0.6269,
+              0.4159
+            ],
+            [
+              0.6269,
+              0.3048
+            ]
+          ],
+          "label": "오른쪽"
+        },
+        {
+          "pts": [
+            [
+              0.6269,
+              0.746
+            ],
+            [
+              0.6269,
+              0.8651
+            ]
+          ],
+          "label": "왼쪽"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

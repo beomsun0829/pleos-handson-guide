@@ -1,0 +1,32 @@
+{
+  "card": "c4-autohold",
+  "source": [
+    "grandeur_performance_drive_mode.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "화면 설정 › 주행 제어",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.36,
+            0.3125
+          ],
+          "label": "주행 제어",
+          "side": "below"
+        },
+        {
+          "at": [
+            0.65,
+            0.2
+          ],
+          "label": "AUTO HOLD",
+          "side": "below"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

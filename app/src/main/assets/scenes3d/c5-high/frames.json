@@ -1,0 +1,29 @@
+{
+  "card": "c5-high",
+  "source": [
+    "grandeur_function_multi_function_switch.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "핸들 왼쪽 레버",
+      "ms": 2000,
+      "arrows": [
+        {
+          "pts": [
+            [
+              0.3223,
+              0.5238
+            ],
+            [
+              0.5,
+              0.3651
+            ]
+          ],
+          "label": "앞으로 밀기"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

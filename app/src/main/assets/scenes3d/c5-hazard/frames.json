@@ -1,0 +1,22 @@
+{
+  "card": "c5-hazard",
+  "source": [
+    "hmg/t13.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "화면 아래 버튼 줄 가운데",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.4444,
+            0.5347
+          ]
+        }
+      ],
+      "done": true
+    }
+  ]
+}

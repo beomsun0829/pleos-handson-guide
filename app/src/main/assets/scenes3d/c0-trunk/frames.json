@@ -1,0 +1,23 @@
+{
+  "card": "c0-trunk",
+  "source": [
+    "grandeur_interior.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "핸들 왼쪽 아래 트렁크 버튼",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.5152,
+            0.4129
+          ],
+          "label": "길게 누르기"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "packageName": "io.github.beomsun0829.handsonguide",
+  "appDescription": "Hands-on Guide provides reviewed vehicle-feature and driving-skill guidance for beginner drivers, parked tutorials, and driving coaching.",
+  "version": "0.1.0",
+  "actionCalls": [
+    {
+      "type": "function",
+      "function": {
+        "name": "EXPLAIN_CAR_FEATURE",
+        "component": "service",
+        "description": "Retrieve reviewed guidance about a vehicle feature, driving skill, or active warning light. While driving, return only the key point.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "type": "string",
+              "description": "The vehicle feature or driving lesson to explain or open.",
+              "enum": [
+                "defog_front",
+                "defog_rear",
+                "recirculation",
+                "air_conditioner",
+                "headlights",
+                "high_beam",
+                "hazard_lights",
+                "wipers",
+                "turn_signal",
+                "seat_position",
+                "headrest",
+                "steering_grip",
+                "mirrors",
+                "gear",
+                "parking_brake",
+                "auto_hold",
+                "cruise_control",
+                "lane_keeping",
+                "lane_change",
+                "shoulder_check",
+                "highway_merge",
+                "right_turn_stop",
+                "unprotected_left_turn",
+                "roundabout",
+                "school_zone",
+                "parking_order",
+                "safe_distance",
+                "highway_exit",
+                "reverse_parking",
+                "door_open",
+                "trunk",
+                "steering_position",
+                "air_vents",
+                "warning_lights",
+                "emergency_vehicle",
+                "toll_gate",
+                "parallel_parking",
+                "bus_lane",
+                "start_car",
+                "current_warning_light"
+              ]
+            }
+          },
+          "required": [
+            "topic"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "OPEN_TUTORIAL_LESSON",
+        "component": "activity",
+        "description": "Open a driving tutorial lesson while parked. The lesson cannot be opened while driving.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "type": "string",
+              "description": "The vehicle feature or driving lesson to explain or open.",
+              "enum": [
+                "defog_front",
+                "defog_rear",
+                "recirculation",
+                "air_conditioner",
+                "headlights",
+                "high_beam",
+                "hazard_lights",
+                "wipers",
+                "turn_signal",
+                "seat_position",
+                "headrest",
+                "steering_grip",
+                "mirrors",
+                "gear",
+                "parking_brake",
+                "auto_hold",
+                "cruise_control",
+                "lane_keeping",
+                "lane_change",
+                "shoulder_check",
+                "highway_merge",
+                "right_turn_stop",
+                "unprotected_left_turn",
+                "roundabout",
+                "school_zone",
+                "parking_order",
+                "safe_distance",
+                "highway_exit",
+                "reverse_parking",
+                "door_open",
+                "trunk",
+                "steering_position",
+                "air_vents",
+                "warning_lights",
+                "emergency_vehicle",
+                "toll_gate",
+                "parallel_parking",
+                "bus_lane",
+                "start_car",
+                "current_warning_light"
+              ]
+            },
+            "chapter": {
+              "type": "number",
+              "description": "Optional tutorial chapter number from 1 to 14."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "ADJUST_COACHING",
+        "component": "service",
+        "description": "Repeat the last guidance, mute information tips for thirty minutes, resume guidance, or adjust explanation detail.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "command": {
+              "type": "string",
+              "description": "The requested coaching adjustment.",
+              "enum": [
+                "repeat_last",
+                "quiet_30min",
+                "resume",
+                "more_detail",
+                "less_detail"
+              ]
+            }
+          },
+          "required": [
+            "command"
+          ]
+        }
+      }
+    }
+  ]
+}

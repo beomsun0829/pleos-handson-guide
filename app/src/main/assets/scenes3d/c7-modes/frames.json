@@ -1,0 +1,22 @@
+{
+  "card": "c7-modes",
+  "source": [
+    "hmg/t13.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "화면 아래 바",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.5154,
+            0.5275
+          ]
+        }
+      ],
+      "done": true
+    }
+  ]
+}

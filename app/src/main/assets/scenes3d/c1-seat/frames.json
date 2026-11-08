@@ -1,0 +1,38 @@
+{
+  "card": "c1-seat",
+  "source": [
+    "grandeur_features_exclusive_passenger_8_way_electric_seat.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "시트 왼쪽 옆 스위치",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.1912,
+            0.4301
+          ],
+          "label": "허리"
+        },
+        {
+          "at": [
+            0.4265,
+            0.3934
+          ],
+          "label": "등받이"
+        },
+        {
+          "at": [
+            0.7353,
+            0.5772
+          ],
+          "label": "앞뒤 · 높이",
+          "side": "below"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

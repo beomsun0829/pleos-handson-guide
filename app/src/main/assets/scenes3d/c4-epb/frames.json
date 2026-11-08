@@ -1,0 +1,23 @@
+{
+  "card": "c4-epb",
+  "source": [
+    "grandeur_interior.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "핸들 왼쪽 아래 (P) 스위치",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.4242,
+            0.553
+          ],
+          "label": "당기기"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

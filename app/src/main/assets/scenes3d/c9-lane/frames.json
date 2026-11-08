@@ -1,0 +1,22 @@
+{
+  "card": "c9-lane",
+  "source": [
+    "grandeur_interior_double_d_cut_handle.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "핸들 왼쪽 아래 버튼",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.3923,
+            0.6875
+          ]
+        }
+      ],
+      "done": true
+    }
+  ]
+}

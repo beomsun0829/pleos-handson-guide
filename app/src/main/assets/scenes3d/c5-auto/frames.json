@@ -1,0 +1,20 @@
+{
+  "card": "c5-auto",
+  "source": [
+    "grandeur_function_multi_function_switch.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "왼쪽 레버 표시창",
+      "ms": 2000,
+      "ring": [
+        0.5761,
+        0.619,
+        0.0952,
+        0.1032
+      ],
+      "done": true
+    }
+  ]
+}

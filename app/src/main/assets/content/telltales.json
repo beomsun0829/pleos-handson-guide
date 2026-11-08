@@ -1,0 +1,25 @@
+{
+  "telltales": [
+    { "type": "ENGINE_OIL_PRESSURE", "name": "엔진오일 압력", "grade": "즉시 정차", "meaning": "엔진오일이 부족하거나 돌지 않아요.", "action": "안전한 곳에 세우고 시동을 꺼요.", "keepDriving": "운전하지 않아요" },
+    { "type": "ENGINE_TEMPERATURE", "name": "냉각수 과열", "grade": "즉시 정차", "meaning": "엔진이 너무 뜨거워요.", "action": "세우고 식을 때까지 기다려요. 보닛은 바로 열지 않아요.", "keepDriving": "운전하지 않아요" },
+    { "type": "PARKING_BRAKE", "name": "주차 브레이크", "grade": "즉시 행동", "meaning": "주차 브레이크가 걸려 있거나 브레이크에 문제가 있어요.", "action": "주차 브레이크를 풀어요. 계속 켜져 있으면 세워요.", "keepDriving": "풀고 나서" },
+    { "type": "ELECTRONIC_PARKING_BRAKE", "name": "전자식 주차 브레이크", "grade": "빨리 점검", "meaning": "전자식 주차 브레이크에 이상이 있어요.", "action": "오늘 안에 점검받아요.", "keepDriving": "조심해서 가능" },
+    { "type": "SEAT_BELT", "name": "안전벨트", "grade": "즉시 행동", "meaning": "안전벨트를 안 맸어요.", "action": "안전벨트를 매요.", "keepDriving": "매고 나서" },
+    { "type": "DOOR_OPEN", "name": "문 열림", "grade": "즉시 행동", "meaning": "문이 덜 닫혔어요.", "action": "안전한 곳에 세우고 문을 닫아요.", "keepDriving": "닫고 나서" },
+    { "type": "TRUNK_OPEN", "name": "트렁크 열림", "grade": "즉시 행동", "meaning": "트렁크가 덜 닫혔어요.", "action": "세우고 트렁크를 닫아요.", "keepDriving": "닫고 나서" },
+    { "type": "AIRBAG", "name": "에어백", "grade": "빨리 점검", "meaning": "에어백 장치에 문제가 있어요.", "action": "오늘 안에 점검받아요.", "keepDriving": "가능" },
+    { "type": "ABS", "name": "ABS", "grade": "빨리 점검", "meaning": "급제동 때 바퀴 잠김을 막는 장치에 이상이 있어요.", "action": "급제동을 피하고 점검받아요.", "keepDriving": "조심해서 가능" },
+    { "type": "TPMS", "name": "타이어 공기압", "grade": "빨리 점검", "meaning": "타이어 공기압이 낮아요.", "action": "속도를 줄이고 가까운 주유소나 정비소에서 확인해요.", "keepDriving": "천천히" },
+    { "type": "ENGINE", "name": "엔진 점검", "grade": "빨리 점검", "meaning": "엔진이나 배기 장치에 이상이 있어요.", "action": "오늘 안에 점검받아요.", "keepDriving": "가능" },
+    { "type": "LOW_FUEL", "name": "연료 부족", "grade": "빨리 점검", "meaning": "연료가 얼마 안 남았어요.", "action": "가까운 주유소로 가요.", "keepDriving": "가능" },
+    { "type": "LOW_EV_BATTERY", "name": "배터리 부족", "grade": "빨리 점검", "meaning": "배터리가 얼마 안 남았어요.", "action": "가까운 충전소로 가요.", "keepDriving": "가능" },
+    { "type": "LOW_VOLT_BATTERY", "name": "충전 경고", "grade": "즉시 정차", "meaning": "배터리 충전에 문제가 있어요.", "action": "전기 장치를 끄고 가까운 정비소로 가요.", "keepDriving": "짧게만" },
+    { "type": "ESC", "name": "차체 자세 제어", "grade": "작동 표시", "meaning": "미끄러짐을 잡아주는 기능이 작동 중이에요.", "action": "속도를 줄이고 부드럽게 운전해요.", "keepDriving": "가능" },
+    { "type": "ESC_OFF", "name": "차체 자세 제어 꺼짐", "grade": "빨리 점검", "meaning": "미끄러짐을 잡아주는 기능이 꺼졌어요.", "action": "버튼으로 다시 켜요.", "keepDriving": "가능" },
+    { "type": "MDPS", "name": "전동 조향", "grade": "즉시 정차", "meaning": "핸들을 돕는 장치에 이상이 있어요. 핸들이 무거워질 수 있어요.", "action": "안전한 곳에 세우고 점검을 불러요.", "keepDriving": "운전하지 않아요" },
+    { "type": "EV_SYSTEM", "name": "전기차 시스템", "grade": "즉시 정차", "meaning": "전기차 구동 장치에 이상이 있어요.", "action": "안전한 곳에 세우고 점검을 불러요.", "keepDriving": "운전하지 않아요" },
+    { "type": "MASTER_WARNING", "name": "종합 경고", "grade": "빨리 점검", "meaning": "계기판에 확인할 메시지가 있어요.", "action": "정차 후 계기판 메시지를 확인해요.", "keepDriving": "메시지에 따라" },
+    { "type": "ICY_ROAD", "name": "노면 결빙 주의", "grade": "빨리 점검", "meaning": "바깥 기온이 낮아 길이 얼었을 수 있어요.", "action": "속도를 절반 가까이 줄이고 급조작을 피해요.", "keepDriving": "천천히" },
+    { "type": "DRIVER_ATTENTION", "name": "운전자 주의", "grade": "빨리 점검", "meaning": "차가 운전자가 피곤해 보인다고 판단했어요.", "action": "다음 휴게소에서 쉬어 가요.", "keepDriving": "쉬어 가요" }
+  ]
+}

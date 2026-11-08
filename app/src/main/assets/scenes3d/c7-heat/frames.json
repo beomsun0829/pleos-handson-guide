@@ -1,0 +1,23 @@
+{
+  "card": "c7-heat",
+  "source": [
+    "hmg/t13.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "버튼 줄 양 끝",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.2208,
+            0.4717
+          ],
+          "label": "운전석"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

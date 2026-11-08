@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Steering wheel seen from the seat (rim, hub, one spoke down) with a small guide bubble at its top right. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#00000000" android:strokeColor="#FFFFFF" android:strokeWidth="6"
+        android:pathData="M54,32 a22,22 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M33,51 h42 a3,3 0 0 1 0,6 h-42 a3,3 0 0 1 0,-6 z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M51,54 h6 v22 h-6 z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M54,54 m-7,0 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0" />
+    <path android:fillColor="#FFB24A" android:pathData="M72,24 h12 a5,5 0 0 1 5,5 v6 a5,5 0 0 1 -5,5 h-6 l-5,4 v-4 h-1 a5,5 0 0 1 -5,-5 v-6 a5,5 0 0 1 5,-5 z" />
+</vector>

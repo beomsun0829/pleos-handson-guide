@@ -1,0 +1,23 @@
+{
+  "card": "c0-door",
+  "source": [
+    "grandeur_design_pop_up_door_handle_off.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "운전석 문 손잡이",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.5,
+            0.4811
+          ],
+          "label": "당기기"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

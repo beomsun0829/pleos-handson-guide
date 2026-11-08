@@ -1,0 +1,20 @@
+# Gradle / Android build state
+local.properties
+.gradle/
+.kotlin/
+build/
+.cxx/
+.externalNativeBuild/
+*.jks
+*.keystore
+
+# APKs are built locally; only the submitted release lives in apk/
+*.apk
+*.aab
+!apk/*.apk
+
+# Editor and OS files
+.idea/
+*.iml
+.DS_Store
+Thumbs.db

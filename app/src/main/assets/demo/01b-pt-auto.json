@@ -1,0 +1,192 @@
+{
+  "name": "pt-auto",
+  "title": "PT 시연 · 자동 (4분)",
+  "override": true,
+  "steps": [
+    {
+      "t": 0,
+      "action": "openCard:c6-front"
+    },
+    {
+      "t": 8,
+      "set": {
+        "defrostFront": true
+      }
+    },
+    {
+      "t": 14,
+      "set": {
+        "defrostFront": false
+      }
+    },
+    {
+      "t": 45,
+      "action": "openCard:c6-vent"
+    },
+    {
+      "t": 46,
+      "set": {
+        "fanDirection": "FACE"
+      }
+    },
+    {
+      "t": 52,
+      "set": {
+        "fanDirection": "FLOOR"
+      }
+    },
+    {
+      "t": 80,
+      "action": "openCard:c1-seat"
+    },
+    {
+      "t": 81,
+      "set": {
+        "seatForeAft": 0
+      }
+    },
+    {
+      "t": 88,
+      "set": {
+        "seatForeAft": 40
+      }
+    },
+    {
+      "t": 110,
+      "set": {
+        "navActive": true,
+        "navNextTurnType": "RIGHT",
+        "navNextTurnDistance": 600,
+        "navSpeedLimit": 50,
+        "navNextTurnDesc": "강남대로 방면",
+        "navRouteId": "pt-route",
+        "navUnprotectedLeft": false
+      }
+    },
+    {
+      "t": 110,
+      "set": {
+        "brakePressed": false,
+        "turnSignal": "OFF",
+        "highBeam": false,
+        "lowBeam": true,
+        "beltDriver": true
+      }
+    },
+    {
+      "t": 120,
+      "set": {
+        "gear": "D",
+        "speedKmh": 35,
+        "turnSignal": "OFF"
+      }
+    },
+    {
+      "t": 122,
+      "ramp": {
+        "navNextTurnDistance": [
+          600,
+          40
+        ],
+        "dur": 22
+      }
+    },
+    {
+      "t": 146,
+      "set": {
+        "navNextTurnType": "LEFT",
+        "navNextTurnDistance": 900,
+        "navSpeedLimit": 80
+      }
+    },
+    {
+      "t": 150,
+      "set": {
+        "cruise": "ACTIVATED"
+      }
+    },
+    {
+      "t": 150,
+      "ramp": {
+        "speedKmh": [
+          35,
+          60
+        ],
+        "dur": 4
+      }
+    },
+    {
+      "t": 158,
+      "set": {
+        "cruise": "SUSPENDED",
+        "brakePressed": true
+      }
+    },
+    {
+      "t": 159,
+      "set": {
+        "brakePressed": false
+      }
+    },
+    {
+      "t": 166,
+      "ramp": {
+        "speedKmh": [
+          60,
+          72
+        ],
+        "dur": 3
+      }
+    },
+    {
+      "t": 174,
+      "ramp": {
+        "speedKmh": [
+          72,
+          48
+        ],
+        "dur": 4
+      }
+    },
+    {
+      "t": 180,
+      "set": {
+        "telltales": [
+          {
+            "type": "TPMS",
+            "state": "ON",
+            "color": "YELLOW"
+          }
+        ]
+      }
+    },
+    {
+      "t": 195,
+      "set": {
+        "wiperSwitch": "LOW",
+        "wiperOn": true,
+        "lowBeam": false
+      }
+    },
+    {
+      "t": 222,
+      "ramp": {
+        "speedKmh": [
+          48,
+          0
+        ],
+        "dur": 8
+      }
+    },
+    {
+      "t": 232,
+      "set": {
+        "gear": "P"
+      }
+    },
+    {
+      "t": 240,
+      "clear": true
+    }
+  ]
+}

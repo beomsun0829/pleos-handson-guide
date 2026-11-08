@@ -1,0 +1,153 @@
+{
+  "name": "drive-only",
+  "title": "주행 훈수만 (2분)",
+  "steps": [
+    {
+      "t": 0,
+      "set": {
+        "gear": "D",
+        "speedKmh": 40,
+        "turnSignal": "OFF",
+        "navActive": true,
+        "navNextTurnType": "RIGHT",
+        "navNextTurnDistance": 500,
+        "navSpeedLimit": 50,
+        "beltDriver": true,
+        "lowBeam": true
+      }
+    },
+    {
+      "t": 1,
+      "ramp": {
+        "navNextTurnDistance": [
+          500,
+          30
+        ],
+        "dur": 18
+      }
+    },
+    {
+      "t": 22,
+      "set": {
+        "navNextTurnType": "LEFT",
+        "navNextTurnDistance": 450
+      }
+    },
+    {
+      "t": 23,
+      "set": {
+        "turnSignal": "LEFT"
+      }
+    },
+    {
+      "t": 24,
+      "ramp": {
+        "navNextTurnDistance": [
+          450,
+          30
+        ],
+        "dur": 14
+      }
+    },
+    {
+      "t": 40,
+      "set": {
+        "turnSignal": "OFF",
+        "navNextTurnType": null,
+        "navNextTurnDistance": null
+      }
+    },
+    {
+      "t": 42,
+      "set": {
+        "telltales": [
+          {
+            "type": "LFA",
+            "state": "ON",
+            "color": "GREEN"
+          }
+        ]
+      }
+    },
+    {
+      "t": 48,
+      "set": {
+        "telltales": [
+          {
+            "type": "LFA",
+            "state": "OFF",
+            "color": "GREEN"
+          }
+        ]
+      }
+    },
+    {
+      "t": 56,
+      "set": {
+        "telltales": [
+          {
+            "type": "FCA",
+            "state": "ON",
+            "color": "RED"
+          }
+        ]
+      }
+    },
+    {
+      "t": 62,
+      "set": {
+        "telltales": []
+      }
+    },
+    {
+      "t": 64,
+      "set": {
+        "turnSignal": "RIGHT",
+        "telltales": [
+          {
+            "type": "LCA_RIGHT",
+            "state": "ON",
+            "color": "YELLOW"
+          }
+        ]
+      }
+    },
+    {
+      "t": 72,
+      "set": {
+        "turnSignal": "OFF",
+        "telltales": []
+      }
+    },
+    {
+      "t": 75,
+      "set": {
+        "nightMode": true,
+        "lowBeam": false
+      }
+    },
+    {
+      "t": 90,
+      "set": {
+        "lowBeam": true
+      }
+    },
+    {
+      "t": 95,
+      "set": {
+        "speedKmh": 0
+      }
+    },
+    {
+      "t": 97,
+      "set": {
+        "gear": "P"
+      }
+    },
+    {
+      "t": 120,
+      "clear": true
+    }
+  ],
+  "override": true
+}

@@ -1,0 +1,29 @@
+{
+  "card": "c2-side",
+  "source": [
+    "grandeur_design_frameless_door.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "운전석 문 밖",
+      "ms": 2000,
+      "ring": [
+        0.2302,
+        0.5536,
+        0.4682,
+        0.3472
+      ],
+      "taps": [
+        {
+          "at": [
+            0.4524,
+            0.6825
+          ],
+          "label": "사이드미러"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

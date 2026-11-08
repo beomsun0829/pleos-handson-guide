@@ -1,0 +1,23 @@
+{
+  "card": "c2-mirror",
+  "source": [
+    "grandeur_interior.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "운전석 문 스위치",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.4029,
+            0.5074
+          ],
+          "label": "미러 스위치"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

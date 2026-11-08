@@ -1,0 +1,29 @@
+{
+  "card": "c4-onefoot",
+  "source": [
+    "grandeur_safety_pedal_malfunction_safety_aid.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "넓은 쪽이 브레이크",
+      "ms": 2000,
+      "arrows": [
+        {
+          "pts": [
+            [
+              0.5127,
+              0.4127
+            ],
+            [
+              0.2843,
+              0.3175
+            ]
+          ],
+          "label": "발끝만"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

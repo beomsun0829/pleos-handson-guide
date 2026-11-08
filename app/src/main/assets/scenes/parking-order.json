@@ -1,0 +1,22 @@
+{
+  "id":"parking-order", "sceneKind":"parking", "model":"cabin-kit.glb", "duration":27,
+  "camera":{"eye":[0.26,0.83,0.05],"target":[0.26,0.74,-0.43],"fov":48},
+  "phases":[
+    {"start":0,"end":3,"kind":"correct","view":"stop","title":"브레이크를 밟고 정지","caption":"완전히 멈춘 상태에서 시작해요.",
+     "camera":{"eye":[-0.34,0.47,0.16],"target":[-0.34,0.23,-0.64],"fov":48}},
+    {"start":3,"end":6,"kind":"correct","view":"parking-brake","title":"주차 브레이크 먼저","caption":"브레이크를 밟은 채 주차 브레이크를 걸어요.",
+     "camera":{"eye":[0.26,0.83,0.05],"target":[0.26,0.74,-0.43],"fov":48}},
+    {"start":6,"end":9,"kind":"correct","view":"neutral","title":"그다음 N","caption":"발로 브레이크를 밟은 채 N으로 놓아요.",
+     "camera":{"eye":[0.23,0.84,0.34],"target":[0.23,0.74,-0.43],"fov":48}},
+    {"start":9,"end":12,"kind":"correct","view":"release","title":"페달을 떼고 확인","caption":"주차 브레이크가 걸린 N에서만, 차가 그대로인지 확인해요.",
+     "camera":{"eye":[-0.34,0.47,0.16],"target":[-0.34,0.23,-0.64],"fov":48}},
+    {"start":12,"end":15,"kind":"correct","view":"park","title":"확인한 뒤 P","caption":"차가 밀리지 않는 것을 확인한 뒤 P로 넣어요.",
+     "camera":{"eye":[0.23,0.84,0.34],"target":[0.23,0.74,-0.43],"fov":48}},
+    {"start":15,"end":19,"kind":"incorrect","view":"pawl-load","title":"P부터 넣으면","caption":"회색은 옳지 않은 예: 변속기 걸쇠에 무게가 실려요.",
+     "camera":{"eye":[6.5,3.6,6.5],"target":[0,0.7,0],"fov":43}},
+    {"start":19,"end":23,"kind":"correct","view":"brake-load","title":"주차 브레이크가 먼저 받아요","caption":"이 순서는 바퀴의 주차 브레이크가 먼저 차 무게를 받게 해요.",
+     "camera":{"eye":[6.5,3.6,6.5],"target":[0,0.7,0],"fov":43}},
+    {"start":23,"end":27,"kind":"correct","view":"practice","title":"직접 해볼 차례예요","caption":"완전히 멈춘 채 주차 브레이크부터 순서대로 해보세요.",
+     "camera":{"eye":[0.26,0.83,0.05],"target":[0.26,0.74,-0.43],"fov":48}}
+  ]
+}

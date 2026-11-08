@@ -1,0 +1,23 @@
+{
+  "card": "c6-rear",
+  "source": [
+    "hmg/t13.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "화면 아래 바",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.4952,
+            0.5744
+          ],
+          "label": "뒷유리"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

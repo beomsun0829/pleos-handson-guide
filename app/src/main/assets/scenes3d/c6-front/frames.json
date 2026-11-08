@@ -1,0 +1,39 @@
+{
+  "card": "c6-front",
+  "source": [
+    "hmg/t13.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "화면 아래 바",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.25,
+            0.5149
+          ],
+          "label": "A/C",
+          "side": "below"
+        },
+        {
+          "at": [
+            0.3976,
+            0.5327
+          ],
+          "label": "앞유리",
+          "side": "below"
+        },
+        {
+          "at": [
+            0.4952,
+            0.5744
+          ],
+          "label": "뒷유리"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

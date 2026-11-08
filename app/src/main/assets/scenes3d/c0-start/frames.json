@@ -1,0 +1,20 @@
+{
+  "card": "c0-start",
+  "source": [
+    "grandeur_features_premium_start_button_smart_key.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "가운데 콘솔 시동 버튼",
+      "ms": 2000,
+      "ring": [
+        0.3226,
+        0.2782,
+        0.3548,
+        0.4436
+      ],
+      "done": true
+    }
+  ]
+}

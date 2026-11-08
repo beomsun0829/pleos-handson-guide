@@ -1,0 +1,14 @@
+{
+  "card": "c8-tpms",
+  "source": [
+    "grandeur_interior_9_9_inch_slim_display.jpg (telltales composited)"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "핸들 너머 계기판",
+      "ms": 2000,
+      "done": true
+    }
+  ]
+}

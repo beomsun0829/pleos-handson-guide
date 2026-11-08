@@ -1,0 +1,127 @@
+{
+  "name": "road-basics",
+  "title": "도로 상황 6가지 (65초)",
+  "override": true,
+  "steps": [
+    {
+      "t": 0,
+      "set": {
+        "gear": "D",
+        "speedKmh": 35,
+        "brakePressed": false,
+        "beltDriver": true,
+        "lowBeam": true,
+        "turnSignal": "LEFT",
+        "steeringDeg": 0,
+        "callActive": false,
+        "gleoSpeaking": false,
+        "uxrRequiresDO": false,
+        "navActive": true,
+        "navRouteId": "road-a",
+        "navNextTurnType": "LEFT",
+        "navNextTurnDistance": 300,
+        "navNextTurnDesc": "비보호 좌회전",
+        "navUnprotectedLeft": true,
+        "navSpeedLimit": 50,
+        "navSchoolZoneDistance": null,
+        "parkingBrake": false,
+        "telltales": [],
+        "nightMode": false,
+        "wiperOn": false,
+        "wiperSwitch": "OFF",
+        "highBeam": false
+      }
+    },
+    {
+      "t": 5,
+      "ramp": {
+        "navNextTurnDistance": [
+          300,
+          45
+        ],
+        "dur": 3
+      }
+    },
+    {
+      "t": 10,
+      "set": {
+        "navActive": false,
+        "navNextTurnType": null,
+        "navNextTurnDistance": null,
+        "navUnprotectedLeft": null,
+        "navSchoolZoneDistance": 80,
+        "navSpeedLimit": 30,
+        "speedKmh": 25,
+        "turnSignal": "OFF"
+      }
+    },
+    {
+      "t": 20,
+      "set": {
+        "navSchoolZoneDistance": null,
+        "navActive": true,
+        "navRouteId": "road-b",
+        "navNextTurnType": "ROUNDABOUT",
+        "navNextTurnDistance": 300,
+        "navNextTurnDesc": "회전교차로"
+      }
+    },
+    {
+      "t": 30,
+      "set": {
+        "navNextTurnType": "UTURN",
+        "navNextTurnDistance": 280,
+        "navNextTurnDesc": "유턴"
+      }
+    },
+    {
+      "t": 40,
+      "set": {
+        "navNextTurnType": "HIGHWAY_EXIT",
+        "navNextTurnDistance": 1500,
+        "navNextTurnDesc": "출구",
+        "navSpeedLimit": 80,
+        "speedKmh": 60
+      }
+    },
+    {
+      "t": 50,
+      "set": {
+        "navNextTurnType": "TUNNEL",
+        "navNextTurnDistance": 350,
+        "navNextTurnDesc": "터널",
+        "lowBeam": false,
+        "speedKmh": 50
+      }
+    },
+    {
+      "t": 56,
+      "ramp": {
+        "speedKmh": [
+          50,
+          0
+        ],
+        "dur": 6
+      }
+    },
+    {
+      "t": 58,
+      "set": {
+        "lowBeam": true
+      }
+    },
+    {
+      "t": 62,
+      "set": {
+        "gear": "P",
+        "navActive": false,
+        "navNextTurnType": null,
+        "navNextTurnDistance": null
+      }
+    },
+    {
+      "t": 65,
+      "clear": true
+    }
+  ]
+}

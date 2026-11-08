@@ -1,0 +1,23 @@
+{
+  "card": "c6-ac",
+  "source": [
+    "hmg/t13.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "화면 아래 바 온도 밑",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.25,
+            0.5149
+          ],
+          "label": "A/C"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

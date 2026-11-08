@@ -1,0 +1,14 @@
+{
+  "id": "front-fog", "sceneKind": "fog", "model": "cabin-kit.glb", "duration": 16,
+  "camera": {"eye": [-0.4,1.2,0.45], "target": [0,1.14,-6], "fov": 56},
+  "phases": [
+    {"start":0,"end":4,"kind":"correct","view":"driver","title":"앞유리가 흐려지면","caption":"김이 서리면 앞이 잘 보이지 않아요.",
+     "camera":{"eye":[-0.4,1.2,0.45],"target":[0,1.14,-6],"fov":56}},
+    {"start":4,"end":8,"kind":"correct","view":"controls","title":"앞유리 모양의 버튼","caption":"물결 화살표가 있는 앞유리 김서림 버튼을 눌러요.",
+     "camera":{"eye":[0.26,0.83,0.05],"target":[0.26,0.74,-0.43],"fov":48}},
+    {"start":8,"end":12,"kind":"correct","view":"clear","title":"바람이 앞유리로 가요","caption":"에어컨이 습기를 빼며 김이 걷히는 효과예요.",
+     "camera":{"eye":[-0.4,1.2,0.45],"target":[0,1.14,-6],"fov":56}},
+    {"start":12,"end":16,"kind":"correct","view":"practice","title":"직접 해볼 차례예요","caption":"앞유리 모양의 실제 김서림 버튼을 눌러보세요.",
+     "camera":{"eye":[0.26,0.83,0.05],"target":[0.26,0.74,-0.43],"fov":48}}
+  ]
+}

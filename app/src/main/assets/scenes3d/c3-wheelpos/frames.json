@@ -1,0 +1,22 @@
+{
+  "card": "c3-wheelpos",
+  "source": [
+    "grandeur_features_exclusive_electric_tilt_telescopic_handle.jpg (bottom faded into a dark strip)"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "핸들 아래 왼쪽 스위치",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.47,
+            0.7375
+          ]
+        }
+      ],
+      "done": true
+    }
+  ]
+}

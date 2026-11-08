@@ -1,0 +1,51 @@
+{
+  "card": "c4-gear",
+  "source": [
+    "grandeur_interior_electronic_shift_lever.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "핸들 오른쪽 뒤 레버",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.8375,
+            0.4188
+          ],
+          "label": "P"
+        }
+      ],
+      "arrows": [
+        {
+          "pts": [
+            [
+              0.375,
+              0.3719
+            ],
+            [
+              0.375,
+              0.2578
+            ]
+          ],
+          "label": "R"
+        },
+        {
+          "pts": [
+            [
+              0.375,
+              0.7312
+            ],
+            [
+              0.375,
+              0.8516
+            ]
+          ],
+          "label": "D"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "card": "c4-smooth",
+  "source": [
+    "grandeur_safety_pedal_malfunction_safety_aid.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "브레이크",
+      "ms": 2000,
+      "arrows": [
+        {
+          "pts": [
+            [
+              0.5691,
+              0.2414
+            ],
+            [
+              0.5691,
+              0.5517
+            ]
+          ],
+          "label": "나눠 밟기"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "turn-signal",
+  "title": "회전 전 깜빡이 (30초)",
+  "override": true,
+  "steps": [
+    {"t": 0, "set": {"gear": "D", "speedKmh": 40, "brakePressed": false, "beltDriver": true, "lowBeam": true, "turnSignal": "OFF",
+      "navActive": true, "navRouteId": "turn-signal", "navNextTurnType": "RIGHT", "navNextTurnDistance": 400, "navNextTurnDesc": "우회전",
+      "navSchoolZoneDistance": 900, "navSpeedLimit": 50}},
+    {"t": 1, "ramp": {"navNextTurnDistance": [400, 30], "dur": 14}},
+    {"t": 15, "set": {"turnSignal": "RIGHT"}},
+    {"t": 15.5, "ramp": {"speedKmh": [40, 20], "dur": 2}},
+    {"t": 18, "set": {"turnSignal": "OFF", "navSchoolZoneDistance": null,
+      "navNextTurnType": "LEFT", "navUnprotectedLeft": true, "navNextTurnDistance": 1200, "navNextTurnDesc": "좌회전"}},
+    {"t": 19, "ramp": {"speedKmh": [20, 40], "dur": 3}},
+    {"t": 22, "ramp": {"speedKmh": [40, 0], "dur": 5}},
+    {"t": 27, "set": {"gear": "P", "navActive": false, "navNextTurnType": null, "navNextTurnDistance": null, "navUnprotectedLeft": null}},
+    {"t": 30, "clear": true}
+  ]
+}

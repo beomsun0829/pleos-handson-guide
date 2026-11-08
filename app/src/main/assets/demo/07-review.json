@@ -1,0 +1,23 @@
+{
+  "name": "review",
+  "title": "깜빡이·크루즈·경고등 (60초)",
+  "override": true,
+  "steps": [
+    {"t": 0, "set": {"gear": "D", "speedKmh": 45, "brakePressed": false, "beltDriver": true, "lowBeam": true, "turnSignal": "OFF",
+      "navActive": true, "navRouteId": "review", "navNextTurnType": "RIGHT", "navNextTurnDistance": 300, "navNextTurnDesc": "테헤란로 우회전",
+      "navSpeedLimit": 60, "cruise": "ENABLED", "telltales": []}},
+    {"t": 1, "ramp": {"navNextTurnDistance": [300, 30], "dur": 10}},
+    {"t": 9, "ramp": {"speedKmh": [45, 20], "dur": 3}},
+    {"t": 11, "set": {"turnSignal": "RIGHT"}},
+    {"t": 14, "set": {"turnSignal": "OFF", "navNextTurnType": "HIGHWAY_EXIT", "navNextTurnDistance": 6000, "navNextTurnDesc": "출구", "navSpeedLimit": 100}},
+    {"t": 14, "ramp": {"speedKmh": [20, 70], "dur": 4}},
+    {"t": 18.5, "set": {"cruise": "ACTIVATED"}},
+    {"t": 21, "set": {"brakePressed": true, "cruise": "SUSPENDED"}},
+    {"t": 21, "ramp": {"speedKmh": [70, 64], "dur": 1.5}},
+    {"t": 22, "set": {"brakePressed": false}},
+    {"t": 26, "set": {"telltales": [{"type": "TPMS", "state": "ON", "color": "YELLOW"}]}},
+    {"t": 28, "ramp": {"speedKmh": [64, 0], "dur": 6.5}},
+    {"t": 35, "set": {"gear": "P", "navActive": false, "navNextTurnType": null, "navNextTurnDistance": null, "cruise": "OFF"}},
+    {"t": 60, "clear": true}
+  ]
+}

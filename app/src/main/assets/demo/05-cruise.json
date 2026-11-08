@@ -1,0 +1,17 @@
+{
+  "name": "cruise",
+  "title": "크루즈 켜짐·해제 (24초)",
+  "override": true,
+  "steps": [
+    {"t": 0, "set": {"gear": "D", "speedKmh": 80, "brakePressed": false, "beltDriver": true, "lowBeam": true, "turnSignal": "OFF",
+      "navActive": true, "navRouteId": "cruise", "navNextTurnType": "HIGHWAY_EXIT", "navNextTurnDistance": 4200, "navSpeedLimit": 100,
+      "cruise": "ENABLED"}},
+    {"t": 3, "set": {"cruise": "ACTIVATED"}},
+    {"t": 12, "set": {"brakePressed": true, "cruise": "SUSPENDED"}},
+    {"t": 12, "ramp": {"speedKmh": [80, 74], "dur": 1.5}},
+    {"t": 13, "set": {"brakePressed": false}},
+    {"t": 14, "ramp": {"speedKmh": [74, 0], "dur": 6.5}},
+    {"t": 21, "set": {"gear": "P", "navActive": false, "navNextTurnType": null, "navNextTurnDistance": null, "cruise": "OFF"}},
+    {"t": 24, "clear": true}
+  ]
+}

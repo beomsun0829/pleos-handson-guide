@@ -1,0 +1,1262 @@
+{
+  "situations": [
+    {
+      "id": "BELT_UNBUCKLED_START",
+      "group": "start",
+      "name": "안전벨트 없이 출발",
+      "priority": 1,
+      "missed": true,
+      "trigger": {
+        "all": [
+          {
+            "signal": "gear",
+            "op": "equals",
+            "value": "D"
+          },
+          {
+            "signal": "beltDriver",
+            "op": "equals",
+            "value": false
+          }
+        ]
+      },
+      "end": {
+        "signal": "beltDriver",
+        "op": "equals",
+        "value": true
+      },
+      "cooldownSec": 30,
+      "card": {
+        "icon": "belt",
+        "word": "안전벨트",
+        "sub": "매고 출발해요",
+        "tone": "alert"
+      },
+      "say": {
+        "first": "안전벨트를 매고 출발해요.",
+        "learning": "안전벨트 매요.",
+        "brief": "벨트."
+      },
+      "relatedCards": [
+        "c1-belt"
+      ],
+      "detail": "안전벨트는 어깨띠가 목과 어깨 중간, 골반띠가 골반에 오게 매요."
+    },
+    {
+      "id": "TELLTALE_RED",
+      "group": "vehicle",
+      "name": "빨간 경고등",
+      "priority": 1,
+      "drivingOnly": false,
+      "trigger": {
+        "signal": "ttRed",
+        "op": "present"
+      },
+      "end": {
+        "signal": "ttRed",
+        "op": "equals",
+        "value": null
+      },
+      "cooldownSec": 120,
+      "card": {
+        "icon": "telltale",
+        "word": "{telltale}",
+        "sub": "{telltaleAction}",
+        "tone": "alert"
+      },
+      "say": {
+        "first": "빨간 경고등이에요. {telltale}. {telltaleAction}",
+        "learning": "빨간 경고등. {telltale}. {telltaleAction}",
+        "brief": "빨간 경고등. {telltaleAction}"
+      },
+      "relatedCards": [
+        "c8-colors"
+      ],
+      "detail": "빨간 경고등은 바로 안전한 곳에 세우라는 뜻이에요."
+    },
+    {
+      "id": "TELLTALE_AMBER",
+      "group": "vehicle",
+      "name": "노란 경고등",
+      "priority": 2,
+      "drivingOnly": false,
+      "trigger": {
+        "signal": "ttAmber",
+        "op": "present"
+      },
+      "cooldownSec": 300,
+      "card": {
+        "icon": "telltale",
+        "word": "{telltale}",
+        "sub": "{telltaleAction}",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "{telltale} 경고등이에요. 당장 위험하진 않아요. {telltaleAction}",
+        "learning": "{telltale} 경고등. {telltaleAction}",
+        "brief": "{telltale} 경고등."
+      },
+      "relatedCards": [
+        "c8-colors",
+        "c8-tpms"
+      ],
+      "detail": "노란 경고등은 운행은 가능하지만 빨리 점검하라는 뜻이에요.",
+      "end": {
+        "signal": "ttAmber",
+        "op": "equals",
+        "value": null
+      }
+    },
+    {
+      "id": "CRUISE_RELEASED",
+      "group": "car",
+      "name": "크루즈 해제",
+      "priority": 2,
+      "banner": true,
+      "trigger": {
+        "sequence": [
+          {
+            "signal": "cruise",
+            "op": "equals",
+            "value": "ACTIVATED"
+          },
+          {
+            "signal": "cruise",
+            "op": "in",
+            "value": [
+              "SUSPENDED",
+              "ENABLED",
+              "OFF"
+            ]
+          }
+        ]
+      },
+      "cooldownSec": 5,
+      "card": {
+        "icon": "cruise",
+        "word": "크루즈 해제됨",
+        "sub": "직접 속도 조절",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "크루즈가 풀렸어요. 이제 직접 속도를 조절하세요.",
+        "learning": "크루즈가 풀렸어요. 직접 속도 조절하세요.",
+        "brief": "크루즈 해제."
+      },
+      "relatedCards": [
+        "c9-release"
+      ],
+      "detail": "브레이크를 밟거나, 센서가 가려지거나, 너무 느려지면 크루즈가 풀려요."
+    },
+    {
+      "id": "CRUISE_FORCED_OFF",
+      "group": "car",
+      "name": "크루즈 강제 해제",
+      "priority": 2,
+      "banner": true,
+      "trigger": {
+        "signal": "cruise",
+        "op": "becomes",
+        "value": "FORCED_OFF"
+      },
+      "cooldownSec": 5,
+      "card": {
+        "icon": "cruise",
+        "word": "크루즈 꺼짐",
+        "sub": "브레이크 준비",
+        "tone": "alert"
+      },
+      "say": {
+        "first": "크루즈가 꺼졌어요. 브레이크에 발을 올려요.",
+        "learning": "크루즈 꺼짐. 브레이크 준비.",
+        "brief": "크루즈 꺼짐."
+      },
+      "relatedCards": [
+        "c9-release"
+      ]
+    },
+    {
+      "id": "CRUISE_ON",
+      "group": "car",
+      "name": "크루즈 작동",
+      "priority": 4,
+      "banner": true,
+      "trigger": {
+        "signal": "cruise",
+        "op": "becomes",
+        "value": "ACTIVATED"
+      },
+      "cooldownSec": 10,
+      "card": {
+        "icon": "cruise",
+        "word": "크루즈 작동",
+        "sub": "브레이크 밟으면 풀려요",
+        "tone": "info"
+      },
+      "say": {
+        "first": "크루즈가 켜졌어요. 브레이크를 밟으면 풀려요.",
+        "learning": "크루즈 켜짐.",
+        "brief": null
+      },
+      "relatedCards": [
+        "c9-cruise"
+      ]
+    },
+    {
+      "id": "LANE_ASSIST_OFF",
+      "group": "car",
+      "name": "차로 유지 꺼짐",
+      "priority": 2,
+      "banner": true,
+      "trigger": {
+        "all": [
+          {
+            "sequence": [
+              {
+                "signal": "tt_LFA",
+                "op": "equals",
+                "value": true
+              },
+              {
+                "signal": "tt_LFA",
+                "op": "equals",
+                "value": false
+              }
+            ]
+          },
+          {
+            "signal": "driveState",
+            "op": "equals",
+            "value": "MOVING"
+          }
+        ]
+      },
+      "cooldownSec": 10,
+      "card": {
+        "icon": "lane",
+        "word": "차로 유지 꺼짐",
+        "sub": "핸들 잡기",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "차로 유지 기능이 꺼졌어요. 핸들을 꼭 잡아요.",
+        "learning": "핸들 잡아요. 차로 유지가 꺼졌어요.",
+        "brief": "차로 유지 꺼짐."
+      },
+      "relatedCards": [
+        "c9-lane"
+      ]
+    },
+    {
+      "id": "FORWARD_COLLISION",
+      "group": "car",
+      "name": "전방 충돌 경고",
+      "priority": 2,
+      "banner": true,
+      "trigger": {
+        "signal": "tt_FCA",
+        "op": "becomes",
+        "value": true
+      },
+      "cooldownSec": 10,
+      "card": {
+        "icon": "cruise",
+        "word": "전방 충돌 경고",
+        "sub": "간격 넓히기",
+        "tone": "alert"
+      },
+      "say": {
+        "first": "앞차와 너무 가까워요. 간격을 넓혀요.",
+        "learning": "앞차와 가까워요. 간격 넓혀요.",
+        "brief": "간격."
+      },
+      "relatedCards": [
+        "c9-fca"
+      ]
+    },
+    {
+      "id": "BLIND_SPOT",
+      "group": "car",
+      "name": "옆 뒤 차량",
+      "priority": 3,
+      "banner": true,
+      "trigger": {
+        "any": [
+          {
+            "all": [
+              {
+                "signal": "tt_LCA_LEFT",
+                "op": "equals",
+                "value": true
+              },
+              {
+                "signal": "turnSignal",
+                "op": "equals",
+                "value": "LEFT"
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "signal": "tt_LCA_RIGHT",
+                "op": "equals",
+                "value": true
+              },
+              {
+                "signal": "turnSignal",
+                "op": "equals",
+                "value": "RIGHT"
+              }
+            ]
+          }
+        ]
+      },
+      "cooldownSec": 8,
+      "card": {
+        "icon": "mirror",
+        "word": "옆 뒤에 차",
+        "sub": "기다렸다가",
+        "tone": "alert"
+      },
+      "say": {
+        "first": "{turnSide} 뒤에 차가 있어요. 지나간 뒤에 바꿔요.",
+        "learning": "{turnSide} 뒤에 차가 있어요.",
+        "brief": "뒤에 차."
+      },
+      "relatedCards": [
+        "c9-bsd",
+        "c2-blind"
+      ]
+    },
+    {
+      "id": "DRIVER_ATTENTION",
+      "group": "car",
+      "name": "휴식 권장",
+      "priority": 2,
+      "banner": true,
+      "trigger": {
+        "signal": "tt_DRIVER_ATTENTION",
+        "op": "becomes",
+        "value": true
+      },
+      "cooldownSec": 600,
+      "card": {
+        "icon": "rest",
+        "word": "쉬어 갈 때",
+        "sub": "다음 휴게소",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "차가 주의 경고를 띄웠어요. 다음 휴게소에서 쉬어 가요.",
+        "learning": "쉬어 갈 때예요.",
+        "brief": "휴식."
+      },
+      "relatedCards": []
+    },
+    {
+      "id": "PARKING_BRAKE_ON_DRIVE",
+      "group": "start",
+      "name": "주차 브레이크 걸린 채 출발",
+      "priority": 3,
+      "missed": true,
+      "trigger": {
+        "all": [
+          {
+            "signal": "gear",
+            "op": "equals",
+            "value": "D"
+          },
+          {
+            "signal": "parkingBrake",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "speedKmh",
+            "op": "gt",
+            "value": 3
+          }
+        ]
+      },
+      "end": {
+        "signal": "parkingBrake",
+        "op": "equals",
+        "value": false
+      },
+      "cooldownSec": 60,
+      "card": {
+        "icon": "park",
+        "word": "주차 브레이크",
+        "sub": "풀고 가요",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "주차 브레이크가 걸려 있어요. 풀고 가요.",
+        "learning": "주차 브레이크 풀어요.",
+        "brief": "주차 브레이크."
+      },
+      "relatedCards": [
+        "c4-park"
+      ]
+    },
+    {
+      "id": "LIGHT_OFF_NIGHT",
+      "group": "weather",
+      "name": "밤인데 라이트 꺼짐",
+      "priority": 3,
+      "missed": true,
+      "trigger": {
+        "all": [
+          {
+            "signal": "isNight",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "lowBeam",
+            "op": "equals",
+            "value": false
+          },
+          {
+            "signal": "driveState",
+            "op": "equals",
+            "value": "MOVING"
+          }
+        ]
+      },
+      "end": {
+        "signal": "lowBeam",
+        "op": "equals",
+        "value": true
+      },
+      "cooldownSec": 120,
+      "card": {
+        "icon": "light",
+        "word": "라이트",
+        "sub": "켜요",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "밤인데 전조등이 꺼져 있어요. 라이트를 켜요.",
+        "learning": "라이트 켜요.",
+        "brief": "라이트."
+      },
+      "relatedCards": [
+        "c5-drl",
+        "c5-auto"
+      ],
+      "source": "도로교통법 제37조"
+    },
+    {
+      "id": "RAIN_START",
+      "group": "weather",
+      "name": "비 오는 날 운전",
+      "priority": 5,
+      "trigger": {
+        "all": [
+          {
+            "signal": "rainLikely",
+            "op": "becomes",
+            "value": true
+          },
+          {
+            "signal": "driveState",
+            "op": "in",
+            "value": [
+              "MOVING",
+              "STOPPED"
+            ]
+          }
+        ]
+      },
+      "cooldownSec": 1800,
+      "card": {
+        "icon": "rain",
+        "word": "비",
+        "sub": "천천히 · 간격 넓게",
+        "tone": "info"
+      },
+      "say": {
+        "first": "비가 와요. 평소보다 천천히, 앞차와 간격을 넓혀요.",
+        "learning": "비. 천천히, 간격 넓게.",
+        "brief": null
+      },
+      "relatedCards": [
+        "c5-rain",
+        "c6-front",
+        "c6-summer"
+      ],
+      "source": "도로교통법 시행규칙 제19조",
+      "detail": "노면이 젖으면 제한속도의 20%, 폭우·안개·빙판에선 50%를 줄여요. 비가 오면 라이트도 켜요."
+    },
+    {
+      "id": "LIGHT_OFF_RAIN",
+      "group": "weather",
+      "name": "비 오는데 라이트 꺼짐",
+      "priority": 3,
+      "missed": true,
+      "trigger": {
+        "all": [
+          {
+            "signal": "rainLikely",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "lowBeam",
+            "op": "equals",
+            "value": false
+          },
+          {
+            "signal": "driveState",
+            "op": "equals",
+            "value": "MOVING"
+          }
+        ]
+      },
+      "end": {
+        "signal": "lowBeam",
+        "op": "equals",
+        "value": true
+      },
+      "cooldownSec": 300,
+      "card": {
+        "icon": "light",
+        "word": "라이트",
+        "sub": "비 올 땐 켜요",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "비 올 땐 라이트를 켜야 해요.",
+        "learning": "라이트 켜요.",
+        "brief": "라이트."
+      },
+      "relatedCards": [
+        "c5-rain"
+      ],
+      "source": "도로교통법 제37조"
+    },
+    {
+      "id": "TURN_PREP",
+      "suppressWhen": {
+        "signal": "navUnprotectedLeft",
+        "op": "equals",
+        "value": true
+      },
+      "group": "intersection",
+      "name": "회전 전 차로 준비",
+      "priority": 4,
+      "trigger": {
+        "all": [
+          {
+            "signal": "navNextTurnType",
+            "op": "in",
+            "value": [
+              "LEFT",
+              "RIGHT"
+            ]
+          },
+          {
+            "signal": "navNextTurnDistance",
+            "op": "lte",
+            "value": 450
+          },
+          {
+            "signal": "navNextTurnDistance",
+            "op": "gte",
+            "value": 150
+          },
+          {
+            "signal": "speedKmh",
+            "op": "gte",
+            "value": 10
+          }
+        ]
+      },
+      "end": {
+        "any": [
+          {
+            "signal": "navNextTurnDistance",
+            "op": "lt",
+            "value": 120
+          },
+          {
+            "signal": "navTurnPassed",
+            "op": "equals",
+            "value": true
+          }
+        ]
+      },
+      "cooldownSec": 40,
+      "card": {
+        "icon": "turn_{turnDir}",
+        "word": "{turnSideLane} 차로로",
+        "sub": "{turnName} 준비",
+        "tone": "info"
+      },
+      "say": {
+        "first": "곧 {turnName}이에요. {turnSideLane} 차로로 미리 옮겨요.",
+        "learning": "{turnSideLane} 차로로.",
+        "brief": null
+      },
+      "relatedCards": [
+        "c5-turn"
+      ]
+    },
+    {
+      "id": "TURN_SIGNAL_MISSING",
+      "group": "lane",
+      "name": "회전 전 깜빡이",
+      "priority": 3,
+      "missed": true,
+      "trigger": {
+        "all": [
+          {
+            "signal": "navNextTurnDistance",
+            "op": "lte",
+            "value": 100
+          },
+          {
+            "signal": "navNextTurnType",
+            "op": "in",
+            "value": [
+              "LEFT",
+              "RIGHT"
+            ]
+          },
+          {
+            "signal": "turnSignal",
+            "op": "equals",
+            "value": "OFF"
+          },
+          {
+            "signal": "speedKmh",
+            "op": "gte",
+            "value": 10
+          }
+        ]
+      },
+      "end": {
+        "any": [
+          {
+            "signal": "turnSignal",
+            "op": "not",
+            "value": "OFF"
+          },
+          {
+            "signal": "navTurnPassed",
+            "op": "equals",
+            "value": true
+          }
+        ]
+      },
+      "okWhen": {
+        "all": [
+          {
+            "signal": "navNextTurnDistance",
+            "op": "lte",
+            "value": 100
+          },
+          {
+            "signal": "turnSignal",
+            "op": "not",
+            "value": "OFF"
+          }
+        ]
+      },
+      "cooldownSec": 40,
+      "card": {
+        "icon": "turn_signal",
+        "word": "깜빡이",
+        "sub": "{turnName} 전",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "곧 {turnName}이에요. 깜빡이를 켜요.",
+        "learning": "깜빡이 켜요.",
+        "brief": "깜빡이."
+      },
+      "relatedCards": [
+        "c5-turn"
+      ],
+      "source": "도로교통법 제38조"
+    },
+    {
+      "id": "SPEEDING",
+      "group": "speed",
+      "name": "제한속도 초과",
+      "priority": 3,
+      "missed": true,
+      "trigger": {
+        "signal": "speedOverKmh",
+        "op": "gte",
+        "value": 10
+      },
+      "end": {
+        "signal": "speedOverKmh",
+        "op": "lt",
+        "value": 3
+      },
+      "cooldownSec": 90,
+      "card": {
+        "icon": "speed",
+        "word": "제한 {limit}",
+        "sub": "속도 줄이기",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "여기 제한속도는 {limit}이에요. 속도를 조금 줄여요.",
+        "learning": "여기 {limit}이에요.",
+        "brief": "{limit}."
+      },
+      "relatedCards": []
+    },
+    {
+      "id": "HIGH_BEAM_ON",
+      "group": "weather",
+      "name": "상향등 켜고 주행",
+      "priority": 3,
+      "missed": true,
+      "trigger": {
+        "all": [
+          {
+            "signal": "highBeam",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "driveState",
+            "op": "equals",
+            "value": "MOVING"
+          }
+        ]
+      },
+      "end": {
+        "signal": "highBeam",
+        "op": "equals",
+        "value": false
+      },
+      "cooldownSec": 180,
+      "card": {
+        "icon": "light",
+        "word": "상향등",
+        "sub": "앞에 차 있으면 끄기",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "상향등이 켜져 있어요. 앞이나 마주 오는 차가 있으면 하향으로 바꿔요.",
+        "learning": "상향등, 앞에 차 있으면 꺼요.",
+        "brief": "상향등."
+      },
+      "relatedCards": [
+        "c5-high"
+      ],
+      "source": "도로교통법 제37조 제2항"
+    },
+    {
+      "id": "RECIRC_LONG",
+      "group": "air",
+      "name": "내기순환 오래 사용",
+      "priority": 5,
+      "trigger": {
+        "all": [
+          {
+            "signal": "recircMinutes",
+            "op": "gte",
+            "value": 20
+          },
+          {
+            "signal": "driveState",
+            "op": "in",
+            "value": [
+              "MOVING",
+              "STOPPED"
+            ]
+          }
+        ]
+      },
+      "end": {
+        "signal": "recirc",
+        "op": "equals",
+        "value": false
+      },
+      "cooldownSec": 1200,
+      "card": {
+        "icon": "recirc",
+        "word": "외기로",
+        "sub": "졸음 예방",
+        "tone": "info"
+      },
+      "say": {
+        "first": "내기순환을 20분 넘게 썼어요. 졸릴 수 있으니 외기로 바꿔요.",
+        "learning": "외기로 바꿔요.",
+        "brief": null
+      },
+      "relatedCards": [
+        "c7-co2"
+      ],
+      "source": "한국도로공사·한국교통안전공단",
+      "detail": "내기만 쓰면 30분 만에 실내 이산화탄소가 크게 올라 졸음과 두통이 올 수 있어요."
+    },
+    {
+      "id": "HARD_BRAKE_REPEAT",
+      "group": "speed",
+      "name": "급제동 반복",
+      "priority": 3,
+      "missed": true,
+      "trigger": {
+        "signal": "hardBrake",
+        "op": "becomes",
+        "value": true
+      },
+      "repeat": {
+        "count": 2,
+        "withinSec": 60
+      },
+      "cooldownSec": 120,
+      "card": {
+        "icon": "brake",
+        "word": "간격",
+        "sub": "넓혀요",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "급하게 서는 일이 잦아요. 앞차와 간격을 넓히면 여유가 생겨요.",
+        "learning": "간격 넓혀요.",
+        "brief": null
+      },
+      "relatedCards": [
+        "c4-smooth"
+      ]
+    },
+    {
+      "id": "LONG_DRIVE",
+      "group": "highway",
+      "name": "오래 운전",
+      "priority": 4,
+      "trigger": {
+        "signal": "drivingMinutes",
+        "op": "gte",
+        "value": 90
+      },
+      "cooldownSec": 1800,
+      "card": {
+        "icon": "rest",
+        "word": "쉬어 가요",
+        "sub": "1시간 반 운전",
+        "tone": "info"
+      },
+      "say": {
+        "first": "1시간 반 넘게 운전했어요. 다음 휴게소나 졸음쉼터에서 쉬어 가요.",
+        "learning": "쉬어 갈 때예요.",
+        "brief": null
+      },
+      "relatedCards": [
+        "c7-co2"
+      ]
+    },
+    {
+      "id": "COLD_START",
+      "group": "weather",
+      "name": "추운 날 출발 전",
+      "priority": 5,
+      "drivingOnly": false,
+      "trigger": {
+        "all": [
+          {
+            "signal": "outsideTempC",
+            "op": "lte",
+            "value": 3
+          },
+          {
+            "signal": "gear",
+            "op": "equals",
+            "value": "P"
+          }
+        ]
+      },
+      "cooldownSec": 43200,
+      "card": {
+        "icon": "defrost_rear",
+        "word": "추운 날",
+        "sub": "서리 녹이고 출발",
+        "tone": "info"
+      },
+      "say": {
+        "first": "추운 날이에요. 유리에 서리가 있으면 다 녹인 뒤 출발해요.",
+        "learning": "서리 있으면 녹이고 출발해요.",
+        "brief": null
+      },
+      "relatedCards": [
+        "c6-frost"
+      ]
+    },
+    {
+      "id": "UNPROTECTED_LEFT_PREP",
+      "group": "intersection",
+      "name": "비보호 좌회전 예고",
+      "priority": 4,
+      "trigger": {
+        "all": [
+          {
+            "signal": "navActive",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "navNextTurnType",
+            "op": "equals",
+            "value": "LEFT"
+          },
+          {
+            "signal": "navUnprotectedLeft",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "navNextTurnDistance",
+            "op": "range",
+            "min": 50,
+            "max": 350
+          }
+        ]
+      },
+      "end": {
+        "signal": "navNextTurnDistance",
+        "op": "lt",
+        "value": 40
+      },
+      "cooldownSec": 90,
+      "card": {
+        "icon": "turn_left",
+        "word": "비보호 좌회전",
+        "sub": "맞은편 먼저",
+        "tone": "info"
+      },
+      "say": {
+        "first": "곧 비보호 좌회전이에요. 초록불에 맞은편 차가 없을 때만 돌아요.",
+        "learning": "비보호. 맞은편 먼저.",
+        "brief": "비보호."
+      },
+      "relatedCards": [
+        "c12-unprotected"
+      ],
+      "detail": "비보호 좌회전은 초록불에, 맞은편 차가 없을 때만 해요. 빨간불엔 안 돼요. 맞은편 직진 차가 먼저예요. 급하면 직진했다가 돌아가도 괜찮아요."
+    },
+    {
+      "id": "SCHOOL_ZONE",
+      "group": "lane",
+      "name": "어린이보호구역",
+      "priority": 3,
+      "trigger": {
+        "signal": "navSchoolZoneDistance",
+        "op": "range",
+        "min": 0,
+        "max": 100
+      },
+      "end": {
+        "signal": "navSchoolZoneDistance",
+        "op": "gt",
+        "value": 150
+      },
+      "cooldownSec": 180,
+      "card": {
+        "icon": "school",
+        "word": "어린이보호구역",
+        "sub": "{schoolLimit} · 횡단보도 확인",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "어린이보호구역, {schoolLimit}. 신호 없는 횡단보도 앞에선 멈췄다 가요.",
+        "learning": "보호구역, {schoolLimit}.",
+        "brief": "보호구역."
+      },
+      "relatedCards": [
+        "c14-school"
+      ],
+      "detail": "아이들은 갑자기 뛰어나와요. 신호 없는 횡단보도 앞에서는 사람이 없어도 일시정지해요. 실제 표지판과 계기판에 표시된 제한도 확인해요."
+    },
+    {
+      "id": "ROUNDABOUT_PREP",
+      "group": "intersection",
+      "name": "회전교차로",
+      "priority": 4,
+      "trigger": {
+        "all": [
+          {
+            "signal": "navActive",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "navNextTurnType",
+            "op": "equals",
+            "value": "ROUNDABOUT"
+          },
+          {
+            "signal": "navNextTurnDistance",
+            "op": "range",
+            "min": 50,
+            "max": 350
+          }
+        ]
+      },
+      "end": {
+        "signal": "navNextTurnDistance",
+        "op": "lt",
+        "value": 40
+      },
+      "cooldownSec": 90,
+      "card": {
+        "icon": "roundabout",
+        "word": "회전교차로",
+        "sub": "도는 차 먼저",
+        "tone": "info"
+      },
+      "say": {
+        "first": "곧 회전교차로예요. 천천히 들어가고, 도는 차가 먼저예요.",
+        "learning": "회전교차로. 도는 차 먼저.",
+        "brief": "회전교차로."
+      },
+      "relatedCards": [
+        "c12-roundabout"
+      ],
+      "detail": "회전교차로는 천천히 들어가고, 도는 차가 먼저예요. 반시계 방향으로 돌고, 나갈 때 오른쪽 깜빡이를 켜요."
+    },
+    {
+      "id": "UTURN_PREP",
+      "group": "intersection",
+      "name": "유턴 조건 확인",
+      "priority": 4,
+      "trigger": {
+        "all": [
+          {
+            "signal": "navActive",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "navNextTurnType",
+            "op": "equals",
+            "value": "UTURN"
+          },
+          {
+            "signal": "navNextTurnDistance",
+            "op": "range",
+            "min": 50,
+            "max": 300
+          }
+        ]
+      },
+      "end": {
+        "signal": "navNextTurnDistance",
+        "op": "lt",
+        "value": 40
+      },
+      "cooldownSec": 90,
+      "card": {
+        "icon": "uturn",
+        "word": "유턴",
+        "sub": "표지판 아래 조건 확인",
+        "tone": "info"
+      },
+      "say": {
+        "first": "곧 유턴이에요. 표지판 아래 조건을 확인해요.",
+        "learning": "유턴, 표지판 아래 조건을 확인해요.",
+        "brief": "표지판 조건 확인."
+      },
+      "relatedCards": [
+        "c12-uturn"
+      ],
+      "detail": "내비가 유턴을 안내해도 실제 표지판 아래 조건을 확인해요. 신호·차량·보행자를 직접 확인하고 판단해요."
+    },
+    {
+      "id": "MERGE_PREP",
+      "group": "highway",
+      "name": "고속도로 합류",
+      "priority": 4,
+      "trigger": {
+        "all": [
+          {
+            "signal": "navActive",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "navNextTurnType",
+            "op": "in",
+            "value": [
+              "MERGE",
+              "HIGHWAY_ENTER"
+            ]
+          },
+          {
+            "signal": "navNextTurnDistance",
+            "op": "range",
+            "min": 0,
+            "max": 300
+          }
+        ]
+      },
+      "cooldownSec": 120,
+      "card": {
+        "icon": "lane",
+        "word": "합류",
+        "sub": "끝까지 가속 · 틈 보고",
+        "tone": "info"
+      },
+      "say": {
+        "first": "곧 합류예요. 합류 차로 끝까지 가속하며 틈을 봐요.",
+        "learning": "합류, 끝까지 가속해요.",
+        "brief": "합류."
+      },
+      "relatedCards": [
+        "c13-merge"
+      ]
+    },
+    {
+      "id": "TOLL_PREP",
+      "group": "highway",
+      "name": "요금소",
+      "priority": 4,
+      "trigger": {
+        "all": [
+          {
+            "signal": "navActive",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "navNextTurnType",
+            "op": "in",
+            "value": [
+              "TOLL"
+            ]
+          },
+          {
+            "signal": "navNextTurnDistance",
+            "op": "range",
+            "min": 0,
+            "max": 800
+          }
+        ]
+      },
+      "cooldownSec": 300,
+      "card": {
+        "icon": "road",
+        "word": "요금소",
+        "sub": "하이패스는 파란 차로",
+        "tone": "info"
+      },
+      "say": {
+        "first": "요금소가 가까워요. 하이패스면 파란 차로로 천천히 지나가요.",
+        "learning": "요금소, 하이패스는 파란 차로.",
+        "brief": "요금소."
+      },
+      "relatedCards": [
+        "c13-toll"
+      ]
+    },
+    {
+      "id": "HIGHWAY_EXIT_PREP",
+      "group": "highway",
+      "name": "출구 미리 준비",
+      "priority": 4,
+      "trigger": {
+        "all": [
+          {
+            "signal": "navActive",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "navNextTurnType",
+            "op": "equals",
+            "value": "HIGHWAY_EXIT"
+          },
+          {
+            "signal": "navNextTurnDistance",
+            "op": "range",
+            "min": 800,
+            "max": 2000
+          }
+        ]
+      },
+      "end": {
+        "signal": "navNextTurnDistance",
+        "op": "lt",
+        "value": 700
+      },
+      "cooldownSec": 180,
+      "card": {
+        "icon": "lane",
+        "word": "출구 준비",
+        "sub": "미리 차로 확인",
+        "tone": "info"
+      },
+      "say": {
+        "first": "출구가 가까워요. 지금부터 출구 쪽 차로로 옮겨요.",
+        "learning": "출구 쪽 차로로 옮겨요.",
+        "brief": "출구 준비."
+      },
+      "relatedCards": [
+        "c13-exit",
+        "c13-missed"
+      ],
+      "detail": "실제 차로와 내비 안내를 확인해 미리 준비해요. 출구를 놓치면 다음 출구로 가요. 멈추거나 후진하지 않아요."
+    },
+    {
+      "id": "TUNNEL_LIGHT",
+      "group": "weather",
+      "name": "터널 전 라이트",
+      "priority": 3,
+      "trigger": {
+        "all": [
+          {
+            "signal": "navActive",
+            "op": "equals",
+            "value": true
+          },
+          {
+            "signal": "navNextTurnType",
+            "op": "equals",
+            "value": "TUNNEL"
+          },
+          {
+            "signal": "navNextTurnDistance",
+            "op": "range",
+            "min": 0,
+            "max": 400
+          },
+          {
+            "signal": "lowBeam",
+            "op": "equals",
+            "value": false
+          }
+        ]
+      },
+      "end": {
+        "signal": "lowBeam",
+        "op": "equals",
+        "value": true
+      },
+      "cooldownSec": 120,
+      "card": {
+        "icon": "light",
+        "word": "터널 앞",
+        "sub": "라이트 켜요",
+        "tone": "warn"
+      },
+      "say": {
+        "first": "터널이 가까워요. 라이트를 켜요.",
+        "learning": "터널 앞, 라이트 켜요.",
+        "brief": "라이트."
+      },
+      "relatedCards": [
+        "c5-auto"
+      ],
+      "detail": "터널에 들어가기 전에 라이트를 확인해요. 자동 모드여도 계기판에서 실제 전조등이 켜졌는지 확인해요."
+    }
+  ]
+}

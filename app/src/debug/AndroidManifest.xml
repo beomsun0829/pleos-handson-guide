@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <application android:name=".DebugGuideApp" tools:replace="android:name">
+        <receiver android:name=".GuideStateProbeReceiver" android:exported="true" android:permission="android.permission.DUMP" />
+        <receiver android:name=".GuideDemoProbeReceiver" android:exported="true" android:permission="android.permission.DUMP" />
+    </application>
+</manifest>

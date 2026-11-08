@@ -1,0 +1,38 @@
+{
+  "card": "c4-park",
+  "source": [
+    "grandeur_interior.jpg",
+    "grandeur_interior_electronic_shift_lever.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "① 핸들 왼쪽 아래 (P) 스위치",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.4242,
+            0.553
+          ],
+          "label": "당기기"
+        }
+      ]
+    },
+    {
+      "file": "2_photo",
+      "caption": "② N  ③ 브레이크 떼고 확인  ④ P",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.8375,
+            0.4188
+          ],
+          "label": "P"
+        }
+      ],
+      "done": true
+    }
+  ]
+}

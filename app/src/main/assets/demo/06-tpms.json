@@ -1,0 +1,13 @@
+{
+  "name": "tpms",
+  "title": "타이어 공기압 경고등 (60초)",
+  "override": true,
+  "steps": [
+    {"t": 0, "set": {"gear": "D", "speedKmh": 60, "brakePressed": false, "beltDriver": true, "lowBeam": true, "turnSignal": "OFF",
+      "navActive": false, "navSpeedLimit": 60, "telltales": []}},
+    {"t": 3, "set": {"telltales": [{"type": "TPMS", "state": "ON", "color": "YELLOW"}]}},
+    {"t": 8, "ramp": {"speedKmh": [60, 0], "dur": 6.5}},
+    {"t": 15, "set": {"gear": "P"}},
+    {"t": 60, "clear": true}
+  ]
+}

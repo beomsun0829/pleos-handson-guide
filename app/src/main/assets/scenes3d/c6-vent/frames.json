@@ -1,0 +1,23 @@
+{
+  "card": "c6-vent",
+  "source": [
+    "grandeur_function_electric_air_vent.jpg"
+  ],
+  "frames": [
+    {
+      "file": "1_photo",
+      "caption": "공조 화면",
+      "ms": 2000,
+      "taps": [
+        {
+          "at": [
+            0.5,
+            0.2344
+          ],
+          "label": "바람 방향"
+        }
+      ],
+      "done": true
+    }
+  ]
+}
